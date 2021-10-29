@@ -1,7 +1,20 @@
-var express = require('express')
-var app = express()
+const express = require('express')
+const bodyParser = require('body-parser')
 
-// Web server open port:3000
-app.listen(3000, function () {
-  console.log('start! express server on port 3000')
+const app = express()
+
+// parse requests of content-type: application/json
+app.use(bodyParser.json())
+
+// parse requests of content-type: application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({extended: true}))
+
+// simple route
+app.get('/', (req, res) => {
+  res.json({test: 'success!'})
+})
+
+// set port, listen for requests
+app.listen(5000, () => {
+  console.log('Server is running on port 5000.')
 })
