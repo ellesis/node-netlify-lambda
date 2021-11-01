@@ -18,3 +18,5 @@ fix package.json
 ```
 
 # deploy on the netlify
+
+npm i netlify-lambda serverless-http --save
