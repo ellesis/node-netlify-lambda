@@ -19,4 +19,9 @@ fix package.json
 
 # deploy on the netlify
 
-npm i netlify-lambda serverless-http --save
+- npm i netlify-lambda serverless-http --save
+
+- Add .gitignore
+  /functions
+
+- Create a netlify.toml file
