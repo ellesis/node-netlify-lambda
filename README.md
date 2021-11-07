@@ -6,6 +6,8 @@ npm init
 npm install express --save
 make app.js file
 
+## install nodemon and setting
+
 npm install nodemon -g
 
 fix package.json
@@ -17,7 +19,7 @@ fix package.json
   },
 ```
 
-# deploy on the netlify
+# deploy on the netlify with netlify-lambda, serverless-http
 
 - npm i netlify-lambda serverless-http --save
 
@@ -25,3 +27,11 @@ fix package.json
   /functions
 
 - Create a netlify.toml file
+
+- make folders and files
+  /dist/index.html : blank file
+  /src/api.js
+
+- npm start
+  http://localhost:9000/.netlify/functions/api/
+  http://localhost:9000/.netlify/functions/api/test
