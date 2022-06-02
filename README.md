@@ -1,21 +1,22 @@
-Node Express web server
+Node Express and netlify-lambda web server
 
-# node express - api server
+# node express - netlify-lambda, serverless-http
 
 npm init
 npm install express --save
-make app.js file
+
+make src/api.js file
 
 ## install nodemon and setting
 
 npm install nodemon -g
 
-fix package.json
+- fix package.json
 
 ```json
-"scripts": {
-    "start": "node app.js",
-    "dev": "nodemon --watch app.js"
+  "scripts": {
+    "start": "./node_modules/.bin/netlify-lambda serve src",
+    "build": "./node_modules/.bin/netlify-lambda build src"
   },
 ```
 
@@ -35,3 +36,6 @@ fix package.json
 - npm start
   http://localhost:9000/.netlify/functions/api/
   http://localhost:9000/.netlify/functions/api/test
+
+- deploy url (netlify)
+  https://ellesis-api.netlify.app/.netlify/functions/api/
